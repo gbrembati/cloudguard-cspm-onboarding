@@ -4,11 +4,15 @@ cspm-key-secret = "xxxxxxxxxxxxxxxxxxxx"
 
 azure-onboard   = true
 azure-op-mode   = "Read"
+
+azure-app-client-id   = "xxxxxxxxxxxxxxxxxxxx"
+azure-app-client-key  = "xxxxxxxxxxxxxxxxxxxx"
+azure-app-tenant-id   = "xxxxxxxxxxxxxxxxxxxx"
 azure-accounts  =  {
-    "0" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-#   "1" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-#   "2" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-  }
+        "0" = ["NAME","SUBSCRIPTION ID"]
+#       "1" = ["NAME","SUBSCRIPTION ID"]
+#       "2" = ["NAME","SUBSCRIPTION ID"]
+}
 
 aws-onboard   = true
 aws-op-mode   = "ReadOnly"
