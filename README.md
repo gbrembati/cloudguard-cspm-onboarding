@@ -1,4 +1,4 @@
-# Check Point CPSM Configuration
+# Check Point CPSM Terraform Onboarding
 This Terraform project is intended to be used to onboard multiple Public Cloud accounts (Azure/AWS/GCP) and K8s Clusters in one-shot.     
 What it does is configuring through API (with **Terraform**) an existing CloudGuard CSPM Portal.      
  
@@ -25,11 +25,15 @@ cspm-key-secret = "xxxxxxxxxxxxxxxxxxxx"
 
 azure-onboard   = true
 azure-op-mode   = "Read"
+
+azure-app-client-id   = "xxxxxxxxxxxxxxxxxxxx"
+azure-app-client-key  = "xxxxxxxxxxxxxxxxxxxx"
+azure-app-tenant-id   = "xxxxxxxxxxxxxxxxxxxx"
 azure-accounts  =  {
-    "0" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-#   "1" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-#   "2" = ["NAME","SUBSCRIPTION ID","TENANT ID","CLIENT ID","CLIENT PASSWORD"]
-  }
+        "0" = ["NAME","SUBSCRIPTION ID"]
+#       "1" = ["NAME","SUBSCRIPTION ID"]
+#       "2" = ["NAME","SUBSCRIPTION ID"]
+}
 
 aws-onboard   = true
 aws-op-mode   = "ReadOnly"
@@ -37,8 +41,7 @@ aws-accounts  = {
         "0" = ["NAME","ARN","SECRET"]
 #       "1" = ["NAME","ARN","SECRET"]
 #       "2" = ["NAME","ARN","SECRET"]        
-    }
-
+}
 ```
 If you want (or need) to further customize other project details, you can change defaults in the different __*name-variables.tf*__ files.   
 Here you will also able to find the descriptions that explains what each variable is used for.

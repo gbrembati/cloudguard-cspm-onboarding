@@ -1,4 +1,3 @@
-
 # Onboarding of your Azure Accounts
 resource "dome9_cloudaccount_azure" "onboard-az-account" {
   count = var.azure-onboard ? length(var.azure-accounts) : 0
